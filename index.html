@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/flipTimer.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="/assets/css/swiper-bundle.min.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+
+    <a href="/" class="header__logo">
+      <img src="./assets/images/logo.png" alt="logo" class="header__logo-img">
+    </a>
+    <div class="header__menu">
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#speakers" class="header__link">
+              Спикеры
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#tariffs" class="header__link">
+              Тарифы
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#program" class="header__link">
+              Тайминг
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#contacts" class="header__link">
+              Контакты
+            </a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+      <a href="#tariffs" class="button">
+        <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_164_123)">
+            <path
+              d="M14.9682 6.64142L19.8475 11.5175L11.0184 20.3467L6.14229 15.4673L14.9682 6.64142ZM11.7117 21.7474L21.245 12.2141C21.4249 12.0375 21.5375 11.7927 21.5375 11.5208C21.5375 11.2488 21.426 11.004 21.2461 10.8274L15.6605 5.24175C15.4806 5.07058 15.2358 4.9655 14.9671 4.9655C14.6985 4.9655 14.4536 5.07058 14.2738 5.24283L4.74045 14.7762C4.56062 14.9528 4.44795 15.1976 4.44795 15.4695C4.44795 15.7414 4.55954 15.9863 4.73937 16.1628L10.325 21.7485C10.5049 21.9197 10.7497 22.0247 11.0184 22.0247C11.287 22.0247 11.5319 21.9197 11.7117 21.7474ZM25.43 11.9183L11.4355 25.9291C11.0758 26.2822 10.5829 26.5 10.039 26.5C9.4952 26.5 9.00229 26.2822 8.64262 25.9291L6.69912 23.9867C7.21587 23.4537 7.53329 22.7257 7.53329 21.9229C7.53329 20.2838 6.20404 18.9546 4.56495 18.9546C3.76329 18.9546 3.03529 19.2731 2.5012 19.7898L2.50229 19.7888L0.57287 17.8452C0.219703 17.4856 0.00195312 16.9927 0.00195312 16.4488C0.00195312 15.905 0.219703 15.4121 0.57287 15.0524L14.5685 1.07092C14.9281 0.71775 15.421 0.5 15.9649 0.5C16.5087 0.5 17.0016 0.71775 17.3613 1.07092L19.2907 3.00033C18.7328 3.54092 18.3861 4.29708 18.3861 5.13342C18.3861 6.7725 19.7154 8.10175 21.3545 8.10175C22.1919 8.10175 22.948 7.75508 23.4875 7.19717L23.4886 7.19608L25.4321 9.1255C25.7853 9.48517 26.003 9.97808 26.003 10.5219C26.003 11.0658 25.7853 11.5587 25.4321 11.9183H25.43Z"
+              fill="#BC0E0E" />
+          </g>
+          <defs>
+            <clipPath id="clip0_164_123">
+              <rect width="26" height="26" fill="white" transform="translate(0 0.5)" />
+            </clipPath>
+          </defs>
+        </svg>
+        <span>Купить билет</span>
+      </a>
+    </div>
+    <div class="burger mobile">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 7H4" stroke="#F6F2EE" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M20 12H4" stroke="#F6F2EE" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M20 17H4" stroke="#F6F2EE" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+    </div>
+
+  </header>
+  <main>
+
+    <section class="hero">
+      <img src="./assets/images/curtain.png" alt="" class="hero-curtain left">
+      <img src="./assets/images/curtain.png" alt="" class="hero-curtain right">
+
+      <div class="hero__info">
+        <div class="hero__info-date">17 октября 2025</div>
+        <div class="hero__info-time">
+          10:00-18:00
+        </div>
+        <img src="./assets/images/slashes.svg" alt="" class="hero__info-slashes desktop">
+        <img src="./assets/images/slashes-mobile.svg" alt="" class="hero__info-slashes mobile">
+        <div class="hero__info-location">
+          г. Брест, кинотеатр “Мир”, ул. Пушкинская 7 </div>
+      </div>
+
+      <h1 class="hero__title">
+        Я бренд 2.0
+        <span>коллаб</span>
+      </h1>
+
+
+      <div class="hero__speakers">
+        <div class="hero__speakers-text">
+          более 8 крутых спикеров
+        </div>
+
+        <div class="hero__speakers-list">
+          <img src="./assets/images/speakers/speaker1.png" alt="" class="hero__speakers-item">
+          <img src="./assets/images/speakers/speaker2.png" alt="" class="hero__speakers-item">
+          <img src="./assets/images/speakers/speaker3.png" alt="" class="hero__speakers-item">
+          <img src="./assets/images/speakers/speaker4.png" alt="" class="hero__speakers-item">
+          <img src="./assets/images/speakers/speaker-secret.png" alt="" class="hero__speakers-item">
+
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="partners" id="partners">
+      <h2 class="partners__title">
+        <span>при</span> поддержке
+      </h2>
+
+      <div class="partners__list">
+        <div class="swiper partners__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/1.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/2.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/3.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/4.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/5.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/6.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/7.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/8.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/9.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/10.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/11.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/12.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/13.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/14.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/11.png" alt="" class="partners__item">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper partners__swiper-reverse">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/1.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/2.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/3.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/4.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/5.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/6.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/7.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/8.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/9.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/10.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/11.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/12.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/13.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/14.png" alt="" class="partners__item">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="partners__link">
+                <img src="./assets/images/partners/11.png" alt="" class="partners__item">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="speakers" id="speakers">
+      <h2 class="speakers__title">
+        Спикеры <span>конференции</span>
+      </h2>
+
+      <p class="speakers__text">
+        Сильный спикерский состав: <strong>представители разных сфер бизнеса, управленцы</strong>
+        и <strong>эксперты</strong> с практическим опытом
+        в создании
+        коллабораций и успешного партнёрства
+      </p>
+
+      <div class="speakers__list">
+        <div class="speakers__item">
+          <div class="speakers__item-tag">
+            🔥 Хэдлайнер
+          </div>
+          <div class="speakers__item-img">
+            <img src="./assets/images/speakers/speaker-block1.png" alt="" />
+          </div>
+          <div class="speakers__item-info">
+            <h3 class="speakers__item-title">
+              Анастасия Белочкина
+            </h3>
+            <p class="speakers__item-text">
+              Эксперт по продажам
+            </p>
+
+          </div>
+          <div class="speakers__item-social">
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/inst.svg" alt="" />
+            </a>
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/tg.svg" alt="" />
+            </a>
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/site.svg" alt="" />
+            </a>
+
+          </div>
+        </div>
+        <div class="speakers__item">
+          <div class="speakers__item-tag">
+            🔥 Хэдлайнер
+          </div>
+          <div class="speakers__item-img">
+            <img src="./assets/images/speakers/speaker-block1.png" alt="" />
+          </div>
+          <div class="speakers__item-info">
+            <h3 class="speakers__item-title">
+              Анастасия Белочкина
+            </h3>
+            <p class="speakers__item-text">
+              Эксперт по продажам
+            </p>
+
+          </div>
+          <div class="speakers__item-social">
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/inst.svg" alt="" />
+            </a>
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/tg.svg" alt="" />
+            </a>
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/site.svg" alt="" />
+            </a>
+
+          </div>
+        </div>
+        <div class="speakers__item">
+          <div class="speakers__item-tag">
+            🔥 Хэдлайнер
+          </div>
+          <div class="speakers__item-img">
+            <img src="./assets/images/speakers/speaker-block1.png" alt="" />
+          </div>
+          <div class="speakers__item-info">
+            <h3 class="speakers__item-title">
+              Анастасия Белочкина
+            </h3>
+            <p class="speakers__item-text">
+              Эксперт по продажам
+            </p>
+
+          </div>
+          <div class="speakers__item-social">
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/inst.svg" alt="" />
+            </a>
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/tg.svg" alt="" />
+            </a>
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/site.svg" alt="" />
+            </a>
+
+          </div>
+        </div>
+        <div class="speakers__item">
+          <div class="speakers__item-tag">
+            🔥 Хэдлайнер
+          </div>
+          <div class="speakers__item-img">
+            <img src="./assets/images/speakers/speaker-block1.png" alt="" />
+          </div>
+          <div class="speakers__item-info">
+            <h3 class="speakers__item-title">
+              Анастасия Белочкина
+            </h3>
+            <p class="speakers__item-text">
+              Эксперт по продажам
+            </p>
+
+          </div>
+          <div class="speakers__item-social">
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/inst.svg" alt="" />
+            </a>
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/tg.svg" alt="" />
+            </a>
+            <a href="#" class="speakers__item-social-link" target="_blank">
+              <img src="./assets/images/site.svg" alt="" />
+            </a>
+
+          </div>
+        </div>
+    </section>
+
+    <button class="button">
+      <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_164_123)">
+          <path
+            d="M14.9682 6.64142L19.8475 11.5175L11.0184 20.3467L6.14229 15.4673L14.9682 6.64142ZM11.7117 21.7474L21.245 12.2141C21.4249 12.0375 21.5375 11.7927 21.5375 11.5208C21.5375 11.2488 21.426 11.004 21.2461 10.8274L15.6605 5.24175C15.4806 5.07058 15.2358 4.9655 14.9671 4.9655C14.6985 4.9655 14.4536 5.07058 14.2738 5.24283L4.74045 14.7762C4.56062 14.9528 4.44795 15.1976 4.44795 15.4695C4.44795 15.7414 4.55954 15.9863 4.73937 16.1628L10.325 21.7485C10.5049 21.9197 10.7497 22.0247 11.0184 22.0247C11.287 22.0247 11.5319 21.9197 11.7117 21.7474ZM25.43 11.9183L11.4355 25.9291C11.0758 26.2822 10.5829 26.5 10.039 26.5C9.4952 26.5 9.00229 26.2822 8.64262 25.9291L6.69912 23.9867C7.21587 23.4537 7.53329 22.7257 7.53329 21.9229C7.53329 20.2838 6.20404 18.9546 4.56495 18.9546C3.76329 18.9546 3.03529 19.2731 2.5012 19.7898L2.50229 19.7888L0.57287 17.8452C0.219703 17.4856 0.00195312 16.9927 0.00195312 16.4488C0.00195312 15.905 0.219703 15.4121 0.57287 15.0524L14.5685 1.07092C14.9281 0.71775 15.421 0.5 15.9649 0.5C16.5087 0.5 17.0016 0.71775 17.3613 1.07092L19.2907 3.00033C18.7328 3.54092 18.3861 4.29708 18.3861 5.13342C18.3861 6.7725 19.7154 8.10175 21.3545 8.10175C22.1919 8.10175 22.948 7.75508 23.4875 7.19717L23.4886 7.19608L25.4321 9.1255C25.7853 9.48517 26.003 9.97808 26.003 10.5219C26.003 11.0658 25.7853 11.5587 25.4321 11.9183H25.43Z"
+            fill="#BC0E0E" />
+        </g>
+        <defs>
+          <clipPath id="clip0_164_123">
+            <rect width="26" height="26" fill="white" transform="translate(0 0.5)" />
+          </clipPath>
+        </defs>
+      </svg>
+      <span>Купить билет</span>
+    </button>
+    <button class="button-arrow">
+      <span>Купить билет</span>
+      <div class="arrow">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15.8322 30.0841C15.4623 30.0848 15.1037 29.9559 14.8189 29.7199C14.6586 29.587 14.526 29.4237 14.4289 29.2395C14.3317 29.0553 14.2719 28.8537 14.2528 28.6463C14.2337 28.439 14.2556 28.2298 14.3175 28.031C14.3793 27.8321 14.4797 27.6474 14.613 27.4874L21.7064 19.0007L14.8664 10.4982C14.7349 10.3363 14.6366 10.1499 14.5774 9.94987C14.5181 9.74984 14.499 9.54006 14.521 9.3326C14.5431 9.12514 14.606 8.92408 14.706 8.74099C14.806 8.5579 14.9412 8.39638 15.1039 8.26572C15.2677 8.12158 15.4595 8.01285 15.6674 7.94637C15.8752 7.87989 16.0945 7.85708 16.3116 7.87938C16.5287 7.90169 16.7388 7.96861 16.9288 8.07597C17.1187 8.18332 17.2845 8.32878 17.4155 8.50322L25.063 18.0032C25.2959 18.2865 25.4232 18.6419 25.4232 19.0086C25.4232 19.3754 25.2959 19.7307 25.063 20.0141L17.1464 29.514C16.9875 29.7057 16.7858 29.8571 16.5574 29.9562C16.3291 30.0552 16.0806 30.099 15.8322 30.0841Z"
+            fill="#BC0E0E" />
+        </svg>
+      </div>
+    </button>
+    <button class="button-wide" data-seats="100">
+      <div class="content">
+        <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_164_123)">
+            <path
+              d="M14.9682 6.64142L19.8475 11.5175L11.0184 20.3467L6.14229 15.4673L14.9682 6.64142ZM11.7117 21.7474L21.245 12.2141C21.4249 12.0375 21.5375 11.7927 21.5375 11.5208C21.5375 11.2488 21.426 11.004 21.2461 10.8274L15.6605 5.24175C15.4806 5.07058 15.2358 4.9655 14.9671 4.9655C14.6985 4.9655 14.4536 5.07058 14.2738 5.24283L4.74045 14.7762C4.56062 14.9528 4.44795 15.1976 4.44795 15.4695C4.44795 15.7414 4.55954 15.9863 4.73937 16.1628L10.325 21.7485C10.5049 21.9197 10.7497 22.0247 11.0184 22.0247C11.287 22.0247 11.5319 21.9197 11.7117 21.7474ZM25.43 11.9183L11.4355 25.9291C11.0758 26.2822 10.5829 26.5 10.039 26.5C9.4952 26.5 9.00229 26.2822 8.64262 25.9291L6.69912 23.9867C7.21587 23.4537 7.53329 22.7257 7.53329 21.9229C7.53329 20.2838 6.20404 18.9546 4.56495 18.9546C3.76329 18.9546 3.03529 19.2731 2.5012 19.7898L2.50229 19.7888L0.57287 17.8452C0.219703 17.4856 0.00195312 16.9927 0.00195312 16.4488C0.00195312 15.905 0.219703 15.4121 0.57287 15.0524L14.5685 1.07092C14.9281 0.71775 15.421 0.5 15.9649 0.5C16.5087 0.5 17.0016 0.71775 17.3613 1.07092L19.2907 3.00033C18.7328 3.54092 18.3861 4.29708 18.3861 5.13342C18.3861 6.7725 19.7154 8.10175 21.3545 8.10175C22.1919 8.10175 22.948 7.75508 23.4875 7.19717L23.4886 7.19608L25.4321 9.1255C25.7853 9.48517 26.003 9.97808 26.003 10.5219C26.003 11.0658 25.7853 11.5587 25.4321 11.9183H25.43Z"
+              fill="#BC0E0E" />
+          </g>
+          <defs>
+            <clipPath id="clip0_164_123">
+              <rect width="26" height="26" fill="white" transform="translate(0 0.5)" />
+            </clipPath>
+          </defs>
+        </svg>
+        <div class="button-wide__text">Купить билет</div>
+      </div>
+      <div class="content-places">
+        <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_164_123)">
+            <path
+              d="M14.9682 6.64142L19.8475 11.5175L11.0184 20.3467L6.14229 15.4673L14.9682 6.64142ZM11.7117 21.7474L21.245 12.2141C21.4249 12.0375 21.5375 11.7927 21.5375 11.5208C21.5375 11.2488 21.426 11.004 21.2461 10.8274L15.6605 5.24175C15.4806 5.07058 15.2358 4.9655 14.9671 4.9655C14.6985 4.9655 14.4536 5.07058 14.2738 5.24283L4.74045 14.7762C4.56062 14.9528 4.44795 15.1976 4.44795 15.4695C4.44795 15.7414 4.55954 15.9863 4.73937 16.1628L10.325 21.7485C10.5049 21.9197 10.7497 22.0247 11.0184 22.0247C11.287 22.0247 11.5319 21.9197 11.7117 21.7474ZM25.43 11.9183L11.4355 25.9291C11.0758 26.2822 10.5829 26.5 10.039 26.5C9.4952 26.5 9.00229 26.2822 8.64262 25.9291L6.69912 23.9867C7.21587 23.4537 7.53329 22.7257 7.53329 21.9229C7.53329 20.2838 6.20404 18.9546 4.56495 18.9546C3.76329 18.9546 3.03529 19.2731 2.5012 19.7898L2.50229 19.7888L0.57287 17.8452C0.219703 17.4856 0.00195312 16.9927 0.00195312 16.4488C0.00195312 15.905 0.219703 15.4121 0.57287 15.0524L14.5685 1.07092C14.9281 0.71775 15.421 0.5 15.9649 0.5C16.5087 0.5 17.0016 0.71775 17.3613 1.07092L19.2907 3.00033C18.7328 3.54092 18.3861 4.29708 18.3861 5.13342C18.3861 6.7725 19.7154 8.10175 21.3545 8.10175C22.1919 8.10175 22.948 7.75508 23.4875 7.19717L23.4886 7.19608L25.4321 9.1255C25.7853 9.48517 26.003 9.97808 26.003 10.5219C26.003 11.0658 25.7853 11.5587 25.4321 11.9183H25.43Z"
+              fill="#BC0E0E" />
+          </g>
+          <defs>
+            <clipPath id="clip0_164_123">
+              <rect width="26" height="26" fill="white" transform="translate(0 0.5)" />
+            </clipPath>
+          </defs>
+        </svg>
+        <div class="button-wide__text">Осталось 100 мест!</div>
+      </div>
+    </button>
+  </main>
+
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__container">
+      <div class="mobile-menu__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 20L20 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M4 4L20 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <div class="mobile-menu__list">
+        <a href="#speakers" class="mobile-menu__list-item">
+          Спикеры
+        </a>
+        <a href="#tariffs" class="mobile-menu__list-item">
+          Тарифы
+        </a>
+        <a href="#program" class="mobile-menu__list-item">
+          Тайминг
+        </a>
+        <a href="#contacts" class="mobile-menu__list-item">
+          Контакты
+        </a>
+      </div>
+      <div class="mobile-menu__info">
+        <p class="mobile-menu__info-text address">
+          Кинотеатр «Мир», ул. Пушкинская 7, Брест, Брестская область 224005, Республика Беларусь
+        </p>
+        <a href="tel:+375299999999" class="mobile-menu__info-text phone">
+          +375 (29) 999-99-99
+        </a>
+        <a href="mailto:info@conference.by" class="mobile-menu__info-text email">
+          info@conference.by
+        </a>
+        <div class="mobile-menu__info-social">
+          <a href="instagram" class="mobile-menu__info-social-link">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="16" fill="#6747E5" />
+              <path
+                d="M19.4917 7.66675H12.5084C9.47502 7.66675 7.66669 9.47508 7.66669 12.5084V19.4834C7.66669 22.5251 9.47502 24.3334 12.5084 24.3334H19.4834C22.5167 24.3334 24.325 22.5251 24.325 19.4917V12.5084C24.3334 9.47508 22.525 7.66675 19.4917 7.66675ZM16 19.2334C14.2167 19.2334 12.7667 17.7834 12.7667 16.0001C12.7667 14.2167 14.2167 12.7667 16 12.7667C17.7834 12.7667 19.2334 14.2167 19.2334 16.0001C19.2334 17.7834 17.7834 19.2334 16 19.2334ZM20.9334 11.7334C20.8917 11.8334 20.8334 11.9251 20.7584 12.0084C20.675 12.0834 20.5834 12.1417 20.4834 12.1834C20.3834 12.2251 20.275 12.2501 20.1667 12.2501C19.9417 12.2501 19.7334 12.1667 19.575 12.0084C19.5 11.9251 19.4417 11.8334 19.4 11.7334C19.3584 11.6334 19.3334 11.5251 19.3334 11.4167C19.3334 11.3084 19.3584 11.2001 19.4 11.1001C19.4417 10.9917 19.5 10.9084 19.575 10.8251C19.7667 10.6334 20.0584 10.5417 20.325 10.6001C20.3834 10.6084 20.4334 10.6251 20.4834 10.6501C20.5334 10.6667 20.5834 10.6917 20.6334 10.7251C20.675 10.7501 20.7167 10.7917 20.7584 10.8251C20.8334 10.9084 20.8917 10.9917 20.9334 11.1001C20.975 11.2001 21 11.3084 21 11.4167C21 11.5251 20.975 11.6334 20.9334 11.7334Z"
+                fill="#FAF9F6" />
+            </svg>
+          </a>
+          <a href="telegram" class="mobile-menu__info-social-link">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="16" fill="#6747E5" />
+              <path
+                d="M22.8876 8.44344C22.8876 8.44344 24.5954 7.7775 24.4531 9.39477C24.4057 10.0607 23.9787 12.3915 23.6466 14.9125L22.5081 22.3805C22.5081 22.3805 22.4132 23.4746 21.5593 23.6648C20.7054 23.8551 19.4245 22.9989 19.1873 22.8086C18.9975 22.6659 15.6294 20.5254 14.4433 19.4789C14.1113 19.1935 13.7317 18.6227 14.4908 17.9568L19.472 13.2001C20.0412 12.6293 20.6105 11.2975 18.2385 12.9147L11.597 17.4336C11.597 17.4336 10.8379 17.9092 9.41477 17.4811L6.33117 16.5298C6.33117 16.5298 5.19262 15.8163 7.13765 15.1028C11.8816 12.8671 17.7167 10.5839 22.8876 8.44344Z"
+                fill="#FAF9F6" />
+            </svg>
+          </a>
+
+        </div>
+
+        <a href="#tariffs" class="button">
+          <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_164_123)">
+              <path
+                d="M14.9682 6.64142L19.8475 11.5175L11.0184 20.3467L6.14229 15.4673L14.9682 6.64142ZM11.7117 21.7474L21.245 12.2141C21.4249 12.0375 21.5375 11.7927 21.5375 11.5208C21.5375 11.2488 21.426 11.004 21.2461 10.8274L15.6605 5.24175C15.4806 5.07058 15.2358 4.9655 14.9671 4.9655C14.6985 4.9655 14.4536 5.07058 14.2738 5.24283L4.74045 14.7762C4.56062 14.9528 4.44795 15.1976 4.44795 15.4695C4.44795 15.7414 4.55954 15.9863 4.73937 16.1628L10.325 21.7485C10.5049 21.9197 10.7497 22.0247 11.0184 22.0247C11.287 22.0247 11.5319 21.9197 11.7117 21.7474ZM25.43 11.9183L11.4355 25.9291C11.0758 26.2822 10.5829 26.5 10.039 26.5C9.4952 26.5 9.00229 26.2822 8.64262 25.9291L6.69912 23.9867C7.21587 23.4537 7.53329 22.7257 7.53329 21.9229C7.53329 20.2838 6.20404 18.9546 4.56495 18.9546C3.76329 18.9546 3.03529 19.2731 2.5012 19.7898L2.50229 19.7888L0.57287 17.8452C0.219703 17.4856 0.00195312 16.9927 0.00195312 16.4488C0.00195312 15.905 0.219703 15.4121 0.57287 15.0524L14.5685 1.07092C14.9281 0.71775 15.421 0.5 15.9649 0.5C16.5087 0.5 17.0016 0.71775 17.3613 1.07092L19.2907 3.00033C18.7328 3.54092 18.3861 4.29708 18.3861 5.13342C18.3861 6.7725 19.7154 8.10175 21.3545 8.10175C22.1919 8.10175 22.948 7.75508 23.4875 7.19717L23.4886 7.19608L25.4321 9.1255C25.7853 9.48517 26.003 9.97808 26.003 10.5219C26.003 11.0658 25.7853 11.5587 25.4321 11.9183H25.43Z"
+                fill="#BC0E0E" />
+            </g>
+            <defs>
+              <clipPath id="clip0_164_123">
+                <rect width="26" height="26" fill="white" transform="translate(0 0.5)" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span>Купить билет</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="flipTimer-container">
+    <div class="flipTimer">
+      <div class="days"></div>
+      <div class="hours"></div>
+      <div class="minutes"></div>
+      <div class="seconds"></div>
+    </div>
+    <div class="flipTimer-container-text">
+      <div>
+        дней
+      </div>
+      <div>
+        часов
+      </div>
+      <div>
+        мин
+      </div>
+      <div>
+        сек
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="https://api-maps.yandex.ru/v3/?apikey=e1f9579b-8502-438f-8273-6dff1fc98656&lang=ru_RU"></script>
+  <script src="/assets/lib/swiper-bundle.min.js"></script>
+
+  <script src="/assets/lib/jquery.min.js"></script>
+  <script src="/assets/lib/jquery.flipTimer.js"></script>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/api.js"></script>
+</body>
+
+</html>

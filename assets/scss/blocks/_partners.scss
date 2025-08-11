@@ -1,0 +1,135 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.partners {
+  margin-top: vw-1600(160);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 72px;
+  }
+
+  &__title {
+    @include h2;
+    color: var(--2-txt);
+    margin-bottom: vw-1600(56);
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
+
+    span {
+      @supports ((text-stroke: 1px var(--2-txt)) or (-webkit-text-stroke: 1px var(--2-txt))) {
+        color: transparent;
+        -webkit-text-stroke: 1px var(--2-txt);
+        text-stroke: 1px var(--2-txt);
+        text-shadow: none;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: vw-1600(36);
+
+    @media (max-width: 768px) {
+      gap: 16px;
+    }
+
+    .partners__swiper,
+    .partners__swiper-reverse {
+      padding: 0 vw-1600(24);
+
+      @media (max-width: 768px) {
+        padding: 0 24px;
+      }
+    }
+  }
+
+  &__swiper,
+  &__swiper-reverse {
+    width: 100%;
+
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+
+    .swiper-slide {
+      position: relative;
+      border: 1px solid rgba(246, 242, 238, 0.1);
+      border-radius: vw-1600(16);
+      width: vw-1600(306);
+      height: vw-1600(160);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(40px);
+      background: rgba(246, 242, 238, 0.01);
+      overflow: hidden;
+
+      @media (max-width: 768px) {
+        border-radius: 12px;
+        width: 180px;
+        height: 100px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient-1);
+        border-radius: vw-1600(16);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+          border-radius: 12px;
+        }
+      }
+
+      .partners__link {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: vw-1600(20) vw-1600(33);
+        text-decoration: none;
+
+        @media (max-width: 768px) {
+          padding: 16px 18px;
+        }
+      }
+
+      img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        filter: grayscale(1);
+        transition: filter 0.3s ease-in-out;
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+
+        img {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}

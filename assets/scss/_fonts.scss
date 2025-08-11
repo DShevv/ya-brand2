@@ -1,0 +1,244 @@
+@use "functions" as *;
+
+@font-face {
+  font-family: "Cygre Medium";
+  src: url("/assets/fonts/Cygre-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cygre ExtraBold";
+  src: url("/assets/fonts/Cygre-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cygre SemiBold";
+  src: url("/assets/fonts/Cygre-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cygre Light";
+  src: url("/assets/fonts/Cygre-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cygre Black";
+  src: url("/assets/fonts/Cygre-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cygre";
+  src: url("/assets/fonts/Cygre-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@mixin h1 {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: vw-1600(140);
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 50px;
+  }
+}
+
+@mixin h2 {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: vw-1600(60);
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+@mixin h3 {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: vw-1600(42);
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+@mixin h4 {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: vw-1600(34);
+  line-height: 120%;
+  letter-spacing: 0.02em;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+@mixin h5 {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: vw-1600(28);
+  line-height: 120%;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+@mixin body-1 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: vw-1600(28);
+  line-height: 120%;
+
+  @media (max-width: 768px) {
+    font-size: 21px;
+  }
+}
+
+@mixin body-2 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: vw-1600(28);
+  line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-size: 19px;
+    line-height: 130%;
+  }
+}
+
+@mixin body-3 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: vw-1600(24);
+  line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+
+@mixin body-4 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: vw-1600(22);
+  line-height: 120%;
+
+  @media (max-width: 768px) {
+    font-size: 17px;
+    line-height: 120%;
+  }
+}
+
+@mixin body-5 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: vw-1600(21);
+  line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+@mixin body-6 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: vw-1600(18);
+  line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+
+@mixin body-7 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: vw-1600(17);
+  line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+
+@mixin body-8 {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: vw-1600(16);
+  line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+    line-height: 130%;
+  }
+}
+
+@mixin body-9 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: vw-1600(15);
+  line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 130%;
+  }
+}
+
+@mixin button {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: vw-1600(30);
+  line-height: 120%;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+@mixin button-secondary {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: vw-1600(20);
+  line-height: 120%;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+@mixin header {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: vw-1600(19);
+}
