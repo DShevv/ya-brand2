@@ -1,0 +1,120 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.pros {
+  margin: 0 auto;
+  margin-top: vw-1600(160);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: vw-1600(418);
+  row-gap: vw-1600(205);
+  max-width: vw-1600(1296);
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    margin-top: 72px;
+    max-width: calc(100% - 40px);
+    gap: 64px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: vw-1600(64);
+    width: vw-1600(416);
+    height: fit-content;
+
+    @media (max-width: 768px) {
+      width: 260px;
+      gap: 30px;
+
+      &.active {
+        .pros__item-img {
+          &::before {
+            transform: rotate(8deg);
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      margin-top: vw-1600(190);
+
+      @media (max-width: 768px) {
+        margin-top: 0;
+        justify-self: flex-end;
+      }
+    }
+
+    &:nth-child(3) {
+      margin-left: vw-1600(220);
+      margin-top: vw-1600(-190);
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+
+    &:hover {
+      .pros__item-img {
+        &::before {
+          transform: rotate(8deg);
+        }
+      }
+    }
+
+    &-title {
+      @include h3;
+      color: var(--2-txt);
+      text-align: center;
+    }
+
+    &-img {
+      width: vw-1600(416);
+      position: relative;
+      border-radius: vw-1600(16);
+      height: vw-1600(280);
+
+      @media (max-width: 768px) {
+        width: 260px;
+        border-radius: 12px;
+        height: 160px;
+      }
+
+      img {
+        height: vw-1600(280);
+        width: 100%;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: 768px) {
+          height: 160px;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: vw-1600(416);
+        height: vw-1600(280);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--2-red);
+        z-index: 1;
+        border-radius: vw-1600(16);
+        transition: all 0.3s ease-in-out;
+
+        @media (max-width: 768px) {
+          width: 260px;
+          height: 160px;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+}

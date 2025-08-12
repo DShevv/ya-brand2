@@ -1,0 +1,137 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.plan {
+  margin: 0 auto;
+  margin-top: vw-1600(160);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: vw-1600(1296);
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    margin-top: 72px;
+    max-width: calc(100% - 40px);
+  }
+
+  &__title {
+    @include h2;
+    color: var(--2-txt);
+    margin-bottom: vw-1600(56);
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    span {
+      @supports ((text-stroke: 1px var(--2-txt)) or (-webkit-text-stroke: 1px var(--2-txt))) {
+        color: transparent;
+        -webkit-text-stroke: 1px var(--2-txt);
+        text-stroke: 1px var(--2-txt);
+        text-shadow: none;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: vw-1600(72);
+    width: 100%;
+
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+
+    img {
+      width: vw-1600(360);
+      height: vw-1600(360);
+
+      @media (max-width: 768px) {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    &-content {
+      max-width: vw-1600(746);
+      display: flex;
+      gap: vw-1600(24);
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        max-width: 100%;
+        gap: 8px;
+      }
+    }
+
+    &-number {
+      @include h3;
+      color: var(--2-txt);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: vw-1600(81);
+      height: vw-1600(81);
+      background: var(--2-red);
+      flex-shrink: 0;
+
+      @media (max-width: 768px) {
+        width: 48px;
+        height: 48px;
+      }
+
+      @supports ((text-stroke: 1px var(--2-txt)) or (-webkit-text-stroke: 1px var(--2-txt))) {
+        color: transparent;
+        -webkit-text-stroke: 1px var(--2-txt);
+        text-stroke: 1px var(--2-txt);
+        text-shadow: none;
+      }
+    }
+
+    &-caption {
+      display: flex;
+      flex-direction: column;
+      gap: vw-1600(16);
+
+      @media (max-width: 768px) {
+        gap: 8px;
+      }
+    }
+
+    &-title {
+      @include h3;
+      color: var(--2-txt);
+    }
+
+    &-text {
+      @include body-3;
+      color: var(--2-txt);
+    }
+  }
+}

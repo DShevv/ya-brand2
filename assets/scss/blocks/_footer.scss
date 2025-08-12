@@ -1,0 +1,174 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.footer {
+  margin: 0 auto;
+  margin-top: vw-1600(112);
+  width: 100%;
+  padding-bottom: vw-1600(44);
+
+  @media (max-width: 768px) {
+    margin-top: 48px;
+    padding-bottom: 36px;
+  }
+
+  &__line {
+    display: flex;
+    gap: vw-1600(24);
+    width: fit-content;
+    position: relative;
+
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
+
+    animation: marquee 100s linear infinite;
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      animation: marquee 100s linear infinite;
+    }
+
+    & > div {
+      font-family: var(--second-family);
+      font-weight: 800;
+      font-size: vw-1600(160);
+      line-height: 120%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--2-txt);
+      white-space: nowrap;
+      flex-shrink: 0;
+
+      @media (max-width: 768px) {
+        font-size: 30px;
+      }
+    }
+    & > span {
+      font-family: var(--second-family);
+      font-weight: 800;
+      font-size: vw-1600(160);
+      line-height: 120%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--2-txt);
+      white-space: nowrap;
+      flex-shrink: 0;
+
+      @media (max-width: 768px) {
+        font-size: 30px;
+      }
+
+      @supports ((text-stroke: 1px var(--2-txt)) or (-webkit-text-stroke: 1px var(--2-txt))) {
+        color: transparent;
+        -webkit-text-stroke: 1px var(--2-txt);
+        text-stroke: 1px var(--2-txt);
+        text-shadow: none;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    max-width: vw-1600(1296);
+    margin-top: vw-1600(48);
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      max-width: calc(100% - 40px);
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  &__copy {
+    @include body-8;
+    color: var(--2-txt);
+    font-weight: 700;
+  }
+
+  &__policy {
+    @include body-8;
+    color: var(--2-txt);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+
+  &__dev {
+    @include body-8;
+    color: var(--2-txt);
+
+    a {
+      color: var(--2-txt);
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: vw-1600(36);
+
+    @media (max-width: 768px) {
+      margin-top: 32px;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &-text {
+      @include body-9;
+      color: var(--2-txt);
+      max-width: vw-1600(526);
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+    }
+
+    &-payments {
+      display: flex;
+      gap: vw-1600(16);
+
+      @media (max-width: 768px) {
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      img {
+        max-height: vw-1600(40);
+        max-width: vw-1600(81);
+        object-fit: contain;
+
+        @media (max-width: 768px) {
+          max-height: 27px;
+          max-width: 56px;
+        }
+      }
+    }
+  }
+}

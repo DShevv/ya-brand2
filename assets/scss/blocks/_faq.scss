@@ -1,0 +1,84 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.faq {
+  margin: 0 auto;
+  margin-top: vw-1600(160);
+  width: 100%;
+  max-width: vw-1600(1296);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 72px;
+    flex-direction: column;
+    max-width: calc(100% - 40px);
+    gap: 32px;
+  }
+
+  &__caption {
+    max-width: vw-1600(642);
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+
+    &-title {
+      @include h3;
+      color: var(--2-txt);
+      margin-bottom: vw-1600(16);
+
+      @media (max-width: 768px) {
+        margin-bottom: 12px;
+        text-align: center;
+      }
+    }
+
+    &-text {
+      @include body-5;
+      color: var(--2-txt);
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+
+    a {
+      width: vw-1600(130);
+      height: vw-1600(130);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: var(--2-bg-2);
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+
+      @media (max-width: 768px) {
+        width: 106px;
+        height: 106px;
+      }
+
+      &:nth-child(2) {
+        margin-left: vw-1600(-10);
+        z-index: 1;
+
+        @media (max-width: 768px) {
+          margin-left: -10px;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
