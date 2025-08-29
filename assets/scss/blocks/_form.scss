@@ -46,7 +46,7 @@
     padding-top: vw-1600(78);
     padding-bottom: vw-1600(90);
 
-    @media (max-width: 1600px) {
+    @media (max-width: 768px) {
       position: relative;
       z-index: 3;
       padding-top: 48px;
@@ -56,14 +56,13 @@
 
     .form__title {
       margin-bottom: vw-1600(36);
-      max-width: vw-1600(666);
+      max-width: vw-1600(740);
+      position: relative;
+      z-index: 3;
 
-      @media (max-width: 1600px) {
+      @media (max-width: 768px) {
         max-width: 100%;
         margin-bottom: 24px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
       }
     }
 
@@ -74,7 +73,7 @@
       @include body-3;
       color: var(--2-txt);
 
-      @media (max-width: 1600px) {
+      @media (max-width: 768px) {
         max-width: 100%;
         margin-bottom: 24px;
         text-align: center;
@@ -90,7 +89,7 @@
           width: vw-1600(24);
           height: vw-1600(24);
 
-          @media (max-width: 1600px) {
+          @media (max-width: 768px) {
             width: 18px;
             height: 18px;
           }
@@ -102,7 +101,7 @@
       width: vw-1600(314);
       justify-content: space-between;
 
-      @media (max-width: 1600px) {
+      @media (max-width: 768px) {
         width: 270px;
         margin: 0 auto;
       }
@@ -121,7 +120,7 @@
     width: vw-1600(948);
     height: 100%;
 
-    @media (max-width: 1600px) {
+    @media (max-width: 768px) {
       width: 100%;
       height: 282px;
       top: initial;
@@ -138,7 +137,7 @@
       background-image: linear-gradient(to left, #21212300, #212123);
       z-index: 2;
 
-      @media (max-width: 1600px) {
+      @media (max-width: 768px) {
         background-image: linear-gradient(to top, #21212300, #212123);
         left: 0;
         top: -1px;

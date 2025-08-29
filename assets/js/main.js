@@ -3,6 +3,7 @@ const mobileMenuClose = document.querySelector(".mobile-menu__close");
 const mobileMenuBuy = document.querySelector(".mobile-menu__buy");
 const burger = document.querySelector(".burger");
 const compare = document.querySelector(".compare");
+const places = document.querySelector(".places");
 let address = "ул. Пушкинская 7, Брест";
 
 let speakers = [];
@@ -65,8 +66,20 @@ document.addEventListener("click", (e) => {
     e.stopPropagation();
   }
 
+  if (e.target.classList.contains("places__img")) {
+    e.stopPropagation();
+  }
+
   if (e.target.classList.contains("compare__container")) {
     compare.classList.remove("active");
+  }
+
+  if (e.target.classList.contains("places-btn")) {
+    places.classList.add("active");
+  }
+
+  if (e.target.classList.contains("places__container")) {
+    places.classList.remove("active");
   }
 });
 

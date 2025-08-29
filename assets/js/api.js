@@ -337,6 +337,9 @@ function setActiveTariff(tariff) {
     }
   });
 
+  // Обновляем цену
+  updatePrice(tariff);
+
   // Обновляем кнопку покупки
   updateBuyButton(tariff);
 }
@@ -356,6 +359,15 @@ function updateBuyButton(tariff) {
   if (placesText) {
     placesText.textContent = `Осталось ${tariff.available_seats || 100} мест!`;
   }
+}
+
+function updatePrice(tariff) {
+  const priceElement = document.querySelector(".prices__price");
+  if (!priceElement) return;
+
+  // Используем discounted_price если есть, иначе regular_price
+  const price = tariff.discounted_price || tariff.regular_price;
+  priceElement.textContent = `${parseInt(price)} BYN`;
 }
 
 function setupTabHandlers() {
