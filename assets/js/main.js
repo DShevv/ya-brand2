@@ -1,17 +1,20 @@
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileMenuClose = document.querySelector(".mobile-menu__close");
+const mobileMenuBuy = document.querySelector(".mobile-menu__buy");
 const burger = document.querySelector(".burger");
+const compare = document.querySelector(".compare");
 let address = "ул. Пушкинская 7, Брест";
-const speakers = document.querySelectorAll(".speakers__item");
-const expectations = document.querySelectorAll(".expectations__item");
-const programs = document.querySelectorAll(".program__item");
-const whom = document.querySelectorAll(".who__item");
+
+let speakers = [];
+let prices = [];
+let programs = [];
+let pros = [];
 
 function handleScroll() {
   const windowHeight = window.innerHeight;
   const centerPosition = windowHeight / 2;
 
-  const allElements = [...speakers, ...expectations, ...programs, ...whom];
+  const allElements = [...speakers, ...prices, ...programs, ...pros];
 
   allElements.forEach((element) => {
     const rect = element.getBoundingClientRect();
@@ -24,9 +27,6 @@ function handleScroll() {
     }
   });
 }
-
-window.addEventListener("scroll", handleScroll);
-handleScroll();
 
 document.addEventListener("click", (e) => {
   if (burger.contains(e.target)) {
@@ -49,8 +49,24 @@ document.addEventListener("click", (e) => {
     mobileMenu.classList.remove("active");
   }
 
+  if (mobileMenuBuy.contains(e.target)) {
+    mobileMenu.classList.remove("active");
+  }
+
   if (e.target.classList.contains("mobile-menu__container")) {
     e.stopPropagation();
+  }
+
+  if (e.target.classList.contains("table-btn")) {
+    compare.classList.add("active");
+  }
+
+  if (e.target.classList.contains("compare__img")) {
+    e.stopPropagation();
+  }
+
+  if (e.target.classList.contains("compare__container")) {
+    compare.classList.remove("active");
   }
 });
 
@@ -70,10 +86,10 @@ function formatPhoneNumber(phone) {
   return phone;
 }
 
-/* async function getContacts() {
+async function getContacts() {
   try {
     const response = await fetch(
-      "https://api.posmotri.by/api/v1/public/contacts"
+      "https://api2.posmotri.by/api/v1/public/contacts"
     );
     const data = await response.json();
 
@@ -109,12 +125,12 @@ function formatPhoneNumber(phone) {
     });
 
     // Обновляем социальные сети
-    const instagramLink = document.querySelector(
-      '.contacts__info-social-link[href="instagram"]'
-    );
+    const instagramLink = document.querySelectorAll('a[href="instagram"]');
     if (instagramLink && contact.instagram) {
-      instagramLink.href = `https://www.instagram.com/${contact.instagram}`;
-      instagramLink.target = "_blank";
+      instagramLink.forEach((link) => {
+        link.href = `${contact.instagram}`;
+        link.target = "_blank";
+      });
     }
 
     const telegramLink = document.querySelector(
@@ -131,7 +147,25 @@ function formatPhoneNumber(phone) {
     console.error("Ошибка при загрузке контактов:", error);
   }
 }
-getContacts(); */
+
+// Функция инициализации main.js
+function initializeMain() {
+  speakers = document.querySelectorAll(".speakers__item");
+  prices = document.querySelectorAll(".prices__item");
+  programs = document.querySelectorAll(".program__item");
+  pros = document.querySelectorAll(".pros__item");
+  getContacts();
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+}
+
+// Ждем загрузки API данных перед инициализацией main.js
+if (window.apiDataLoaded) {
+  initializeMain();
+} else {
+  window.addEventListener("apiDataLoaded", initializeMain);
+}
 
 async function initMap() {
   await ymaps3.ready;
@@ -161,7 +195,7 @@ async function initMap() {
         .split(" ")
         .map(Number); // Теперь получаем [долгота, широта]
 
-    fetch("/assets/maps.json")
+    fetch("./assets/maps.json")
       .then((response) => response.json())
       .then((data) => {
         console.log(coordinates, address);
@@ -187,16 +221,6 @@ async function initMap() {
     console.error("Ошибка при геокодировании:", error);
   }
 }
-
-initMap();
-
-$(document).ready(function () {
-  $(".flipTimer").flipTimer({
-    direction: "down",
-
-    date: "September 11, 2025 08:30:30",
-  });
-});
 
 const partnersSwiper = new Swiper(".partners__swiper", {
   slidesPerView: 1,

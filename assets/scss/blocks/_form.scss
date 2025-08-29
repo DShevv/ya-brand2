@@ -1,0 +1,157 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.form {
+  margin: 0 auto;
+  margin-top: vw-1600(160);
+  width: 100%;
+  position: relative;
+
+  background-image: url(../images/form-bg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    margin-top: 72px;
+  }
+
+  &__title {
+    @include h2;
+    color: var(--2-txt);
+    margin-bottom: vw-1600(56);
+    font-size: vw-1600(55);
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+      text-align: center;
+      font-size: 32px;
+    }
+
+    span {
+      @supports ((text-stroke: 1px var(--2-txt)) or (-webkit-text-stroke: 1px var(--2-txt))) {
+        color: transparent;
+        -webkit-text-stroke: 1px var(--2-txt);
+        text-stroke: 1px var(--2-txt);
+        text-shadow: none;
+      }
+    }
+  }
+
+  &__container {
+    max-width: vw-1600(1296);
+    width: 100%;
+    margin: 0 auto;
+    padding-top: vw-1600(78);
+    padding-bottom: vw-1600(90);
+
+    @media (max-width: 1600px) {
+      position: relative;
+      z-index: 3;
+      padding-top: 48px;
+      padding-bottom: 239px;
+      max-width: calc(100% - 40px);
+    }
+
+    .form__title {
+      margin-bottom: vw-1600(36);
+      max-width: vw-1600(666);
+
+      @media (max-width: 1600px) {
+        max-width: 100%;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .form__text {
+      max-width: vw-1600(640);
+      margin-bottom: vw-1600(48);
+
+      @include body-3;
+      color: var(--2-txt);
+
+      @media (max-width: 1600px) {
+        max-width: 100%;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      a {
+        display: inline-flex;
+        gap: vw-1600(6);
+        color: var(--2-txt);
+        align-items: center;
+
+        svg {
+          width: vw-1600(24);
+          height: vw-1600(24);
+
+          @media (max-width: 1600px) {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+
+    .form__btn {
+      width: vw-1600(314);
+      justify-content: space-between;
+
+      @media (max-width: 1600px) {
+        width: 270px;
+        margin: 0 auto;
+      }
+
+      span {
+        flex: 1;
+        text-align: center;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: vw-1600(948);
+    height: 100%;
+
+    @media (max-width: 1600px) {
+      width: 100%;
+      height: 282px;
+      top: initial;
+      bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -1px;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to left, #21212300, #212123);
+      z-index: 2;
+
+      @media (max-width: 1600px) {
+        background-image: linear-gradient(to top, #21212300, #212123);
+        left: 0;
+        top: -1px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

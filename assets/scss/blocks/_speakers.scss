@@ -68,7 +68,7 @@
     border: 1px solid rgba(246, 242, 238, 0.1);
     border-radius: vw-1600(16);
     width: vw-1600(416);
-    height: vw-1600(542);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,6 +162,7 @@
       border-bottom: 1px solid rgba(246, 242, 238, 0.1);
       transition: all 0.3s ease-in-out;
       flex: 0 0 vw-1600(330);
+      overflow: hidden;
 
       @media (max-width: 768px) {
         flex: 0 0 280px;
@@ -170,11 +171,8 @@
       }
 
       img {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
         width: 100%;
-        height: vw-1600(346);
+        height: vw-1600(330);
         object-fit: cover;
 
         @media (max-width: 768px) {

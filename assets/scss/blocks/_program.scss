@@ -124,9 +124,13 @@
       border: 1px solid rgba(246, 242, 238, 0.3);
       border-radius: vw-1600(48);
       height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       white-space: nowrap;
       transition: all 0.3s ease-in-out;
       flex-shrink: 0;
+      flex: 0 0 vw-1600(154);
 
       @media (max-width: 768px) {
         padding: 10px 24px;
@@ -134,6 +138,8 @@
         width: fit-content;
         border-color: var(--2-red);
         margin-bottom: 20px;
+        flex: initial;
+        width: 126px;
       }
     }
 

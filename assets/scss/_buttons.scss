@@ -303,3 +303,34 @@
     display: flex !important;
   }
 }
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: vw-1600(10);
+  border-radius: vw-1600(32);
+  padding: vw-1600(14) vw-1600(32);
+  background: rgba(246, 242, 238, 0.05);
+  outline: none;
+  border: none;
+  color: var(--2-txt);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+
+  @include button-secondary;
+
+  @media (max-width: 768px) {
+    padding: 14px 20px;
+    gap: 8px;
+    border-radius: 32px;
+  }
+
+  &:hover {
+    background: var(--2-red);
+  }
+
+  &:focus {
+    background: var(--2-red-2);
+  }
+}
