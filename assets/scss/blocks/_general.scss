@@ -1,0 +1,60 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.general {
+  margin-top: vw-1600(160);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 72px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include h2;
+    color: var(--2-txt);
+    margin-bottom: vw-1600(56);
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    span {
+      @supports ((text-stroke: 1px var(--2-txt)) or (-webkit-text-stroke: 1px var(--2-txt))) {
+        color: transparent;
+        -webkit-text-stroke: 1px var(--2-txt);
+        text-stroke: 1px var(--2-txt);
+        text-shadow: none;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: vw-1600(16);
+    width: vw-1600(856);
+    height: vw-1600(328);
+
+    @media (max-width: 768px) {
+      border-radius: 12px;
+      width: 100%;
+      height: auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: vw-1600(16);
+
+      @media (max-width: 768px) {
+        border-radius: 12px;
+      }
+    }
+  }
+}
