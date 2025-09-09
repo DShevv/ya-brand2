@@ -1,0 +1,141 @@
+@use "fonts" as *;
+@use "functions" as *;
+
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    left: vw-1600(14);
+    top: vw-1600(-14);
+    @include body-8;
+    color: var(--2-txt);
+    background: var(--2-red);
+    border-radius: vw-1600(14);
+    padding: vw-1600(3) vw-1600(10);
+
+    @media (max-width: 768px) {
+      padding: 3px 10px;
+      left: 14px;
+      top: -14px;
+      border-radius: 14px;
+    }
+  }
+
+  &__field {
+    @include input;
+
+    background: rgba(246, 242, 238, 0.1);
+    color: var(--2-bg);
+    border: none;
+    outline: none;
+    border-radius: vw-1600(48);
+    padding: vw-1600(17) vw-1600(24);
+
+    @media (max-width: 768px) {
+      padding: 12px 24px;
+      border-radius: 48px;
+    }
+
+    &::placeholder {
+      color: var(--2-txt);
+      opacity: 0.4;
+    }
+
+    &:focus {
+      background: var(--2-txt);
+    }
+  }
+
+  &:has(.error) {
+    .input__field {
+      color: var(--2-red);
+      background-color: var(--2-txt);
+      &::placeholder {
+        color: var(--2-red);
+      }
+    }
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: vw-1600(8);
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    gap: 8px;
+    justify-content: center;
+    max-width: 240px;
+  }
+
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__input {
+    width: vw-1600(36);
+    height: vw-1600(36);
+    border: 1px solid rgba(250, 249, 246, 0.1);
+    border-radius: vw-1600(6);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+    }
+
+    &:hover {
+      background: rgba(246, 242, 238, 0.1);
+    }
+
+    svg {
+      width: vw-1600(30);
+      height: vw-1600(30);
+      display: none;
+
+      @media (max-width: 768px) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &:has(input:checked) {
+    .checkbox__input {
+      background: var(--2-red);
+
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    @include body-8;
+    color: var(--2-txt);
+    width: fit-content;
+
+    a {
+      @include body-8;
+      color: var(--2-txt);
+      text-decoration: underline;
+    }
+  }
+}

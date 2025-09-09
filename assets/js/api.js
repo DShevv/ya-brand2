@@ -230,6 +230,7 @@ async function getEvents() {
 }
 
 let tarifsData = null; // Глобальная переменная для хранения данных тарифов
+window.tarifsData = null; // Делаем переменную доступной глобально
 
 async function getTariffs() {
   try {
@@ -238,6 +239,7 @@ async function getTariffs() {
     );
     const data = await response.json();
     tarifsData = data; // Сохраняем данные глобально
+    window.tarifsData = data; // Сохраняем данные в window для доступа из других файлов
 
     // Создаем вкладки из тарифов
     createTariffTabs(data.tariffs);

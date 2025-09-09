@@ -242,3 +242,15 @@
   font-weight: 400;
   font-size: vw-1600(19);
 }
+
+@mixin input {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: vw-1600(18);
+  line-height: 150%;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

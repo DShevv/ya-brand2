@@ -1302,6 +1302,49 @@
 
   </div>
 
+  <div class="tickets-form">
+    <div class="tickets-form__container">
+      <div class="tickets-form__title">купить билет</div>
+      <p class="tickets-form__text">
+        Для оформления билета на конференцию укажите, пожалуйста, <strong>ваши контактные данные</strong>.
+      </p>
+      <form action="" class="tickets-form__form">
+        <label class="input">
+          <div class="input__title">ФИО*</div>
+          <input type="text" class="input__field" name="FullName" id="name" placeholder="Введите ваше ФИО">
+        </label>
+        <label class="input">
+          <div class="input__title">Email*</div>
+          <input type="email" class="input__field" name="Email" id="email" placeholder="Введите ваш email">
+        </label>
+        <label class="input">
+          <div class="input__title">Телефон*</div>
+          <input type="tel" class="input__field" name="Phone" id="phone" placeholder="Введите ваш телефон">
+        </label>
+
+        <div class="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox" required />
+          <label for="checkbox" class="checkbox__input">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.6004 7.79883L11.4004 20.9988L5.40039 14.9988" stroke="#F6F2EE" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </label>
+          <div class="checkbox__text">
+            Согласна(-ен) на <a href="./assets/pdf/privacy_policy_posmotri.pdf">обработку персональных данныхс</a>
+          </div>
+        </div>
+
+        <button type="submit" class="button tickets-form__btn">
+          <span>Перейти к оплате</span>
+        </button>
+
+
+
+      </form>
+    </div>
+  </div>
+
 
 
   <script src="https://api-maps.yandex.ru/v3/?apikey=e1f9579b-8502-438f-8273-6dff1fc98656&lang=ru_RU"></script>
@@ -1309,6 +1352,7 @@
 
   <script src="./assets/lib/jquery.min.js"></script>
   <script src="./assets/lib/jquery.flipTimer.js"></script>
+  <script src="./assets/lib/jquery.inputmask.min.js"></script>
 
   <script src="./assets/js/api.js"></script>
   <script src="./assets/js/main.js"></script>
