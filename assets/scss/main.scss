@@ -15,6 +15,7 @@
 @use "blocks/footer";
 @use "blocks/form";
 @use "blocks/general";
+@use "blocks/cookie";
 
 :root {
   --font-family: "Manrope", sans-serif;
@@ -603,9 +604,10 @@ body {
   &__text {
     @include body-3;
     color: var(--2-txt);
-    margin-bottom: vw-1600(40);
     max-width: vw-1600(594);
+    margin: 0 auto;
     text-align: center;
+    margin-bottom: vw-1600(40);
 
     @media (max-width: 768px) {
       margin-bottom: 40px;

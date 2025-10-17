@@ -130,10 +130,10 @@
         ГЕНЕРАЛЬНЫЙ <span>ПАРТНёР</span>
       </h2>
 
-      <div class="general__image">
+      <a class="general__image" href="https://www.alfabank.by/business" target="_blank">
         <img src="./assets/images/partners/general.png" class="general__image-img desktop" alt="">
         <img src="./assets/images/partners/general-mobile.png" class="general__image-img mobile" alt="">
-      </div>
+      </a>
     </section>
 
     <section class="partners" id="partners">
@@ -779,7 +779,7 @@
           <button class="btn-secondary prices__btn-compare table-btn">
             Сравнение тарифов
           </button>
-          <a href="#" target="_blank" class="button-wide" data-seats="100">
+          <button href="#" target="_blank" class="button-wide" data-seats="100">
             <div class="content">
               <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_164_123)">
@@ -810,7 +810,7 @@
               </svg>
               <div class="button-wide__text">Осталось 100 мест!</div>
             </div>
-          </a>
+          </button>
           <button class="btn-secondary prices__btn-compare places-btn">
             Рассадка
           </button>
@@ -949,6 +949,14 @@
             по указанной ссылке
           </a>
           и заполнить анкету, которую мы подготовили специально для Вас!
+        </div>
+
+        <div class="form__text small">
+          Переходя по ссылке, Вы даете согласие на обработку персональных данных для заполнения анкеты для поиска
+          партнеров для коллабораций и передачи
+          данных третьим лицам. <a href="/policies">Условия такой обработки и права, связанные с
+            такой обработкой, механизм их реализации, последствия дачи согласия или отказа разъяснены до дачи
+            согласия</a>
         </div>
 
         <a target="_blank"
@@ -1331,8 +1339,25 @@
             </svg>
           </label>
           <div class="checkbox__text">
-            Согласна(-ен) на <a href="./assets/pdf/privacy_policy_posmotri.pdf">обработку персональных данныхс</a>
-            и ознакомлен с <a href="./assets/pdf/dogovor.pdf">договором оферты</a>
+            Даю согласие на обработку персональных данных для размещения рекламной информации и информации в рамках
+            новостного
+            контента. <a href="/policies">Условия такой обработки и права, связанные с
+              такой обработкой, механизм их реализации, последствия дачи согласия или отказа до дачи согласия</a>
+          </div>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" id="checkbox2" name="checkbox2" required />
+          <label for="checkbox2" class="checkbox__input">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.6004 7.79883L11.4004 20.9988L5.40039 14.9988" stroke="#F6F2EE" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </label>
+          <div class="checkbox__text">
+            Даю согласие на обработку персональных данных для направления рассылки рекламно-информационного характера и
+            осуществления рекламных звонков. <a href="/policies">Условия такой обработки, права, связанные с такой
+              обработкой, механизм их
+              реализации, последствия дачи согласия или отказа разъяснены до дачи согласия.</a>
           </div>
         </div>
 
@@ -1346,6 +1371,28 @@
     </div>
   </div>
 
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner__container">
+      <div class="cookie-banner__content">
+        <div class="cookie-banner__text">
+          Для обеспечения удобства пользователей сайта используются файлы cookie.
+        </div>
+        <div class="cookie-banner__buttons">
+          <button class="cookie-banner__button cookie-banner__button--accept" id="acceptCookies">
+            Принять
+          </button>
+          <button class="cookie-banner__button cookie-banner__button--decline" id="declineCookies">
+            Отклонить
+          </button>
+          <a href="/policies" target="_blank" class="cookie-banner__button cookie-banner__button--details">
+            Подробнее
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <script src="https://api-maps.yandex.ru/v3/?apikey=e1f9579b-8502-438f-8273-6dff1fc98656&lang=ru_RU"></script>
@@ -1355,6 +1402,7 @@
   <script src="./assets/lib/jquery.flipTimer.js"></script>
   <script src="./assets/lib/jquery.inputmask.min.js"></script>
 
+  <script src="./assets/js/cookie-consent.js"></script>
   <script src="./assets/js/api.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>

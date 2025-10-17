@@ -68,15 +68,26 @@
 
     .form__text {
       max-width: vw-1600(640);
-      margin-bottom: vw-1600(48);
 
       @include body-3;
       color: var(--2-txt);
 
       @media (max-width: 768px) {
         max-width: 100%;
-        margin-bottom: 24px;
         text-align: center;
+      }
+
+      &.small {
+        @include body-9;
+        margin-bottom: vw-1600(48);
+
+        a {
+          display: inline;
+        }
+
+        @media (max-width: 768px) {
+          margin-bottom: 24px;
+        }
       }
 
       a {

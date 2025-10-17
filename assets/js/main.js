@@ -343,6 +343,7 @@ function validateTicketsForm(form) {
   const emailField = form.querySelector('input[name="Email"]');
   const phoneField = form.querySelector('input[name="Phone"]');
   const checkboxField = form.querySelector('input[name="checkbox"]');
+  const checkbox2Field = form.querySelector('input[name="checkbox2"]');
 
   // Валидация имени
   if (!nameField.value.trim()) {
@@ -374,6 +375,10 @@ function validateTicketsForm(form) {
   // Валидация чекбокса
   if (!checkboxField.checked) {
     errors.checkbox = "Необходимо согласие";
+  }
+
+  if (!checkbox2Field.checked) {
+    errors.checkbox2 = "Необходимо согласие";
   }
 
   return errors;
@@ -419,6 +424,11 @@ function showValidationErrors(form, errors) {
     const checkboxText = form.querySelector(".checkbox__text");
     checkboxText.innerHTML = `<span style="color: #BC0E0E;">${errors.checkbox}:</span> ${checkboxText.innerHTML}`;
   }
+
+  if (errors.checkbox2) {
+    const checkbox2Text = form.querySelector(".checkbox__text");
+    checkbox2Text.innerHTML = `<span style="color: #BC0E0E;">${errors.checkbox2}:</span> ${checkbox2Text.innerHTML}`;
+  }
 }
 
 // Функция очистки ошибок
@@ -450,8 +460,17 @@ function clearValidationErrors(form) {
 
   // Восстанавливаем оригинальный текст чекбокса
   const checkboxText = form.querySelector(".checkbox__text");
-  checkboxText.innerHTML =
-    'Согласна(-ен) на <a href="./assets/pdf/privacy_policy_posmotri.pdf">обработку персональных данныхс</a>';
+  checkboxText.innerHTML = `Даю согласие на обработку персональных данных для размещения рекламной информации и информации в рамках
+            новостного
+            контента. <a href="/policies">Условия такой обработки и права, связанные с
+              такой обработкой, механизм их реализации, последствия дачи согласия или отказа до дачи согласия</a>`;
+
+  const checkbox2Text = form.querySelector(".checkbox__text");
+  checkbox2Text.innerHTML = `
+  Даю согласие на обработку персональных данных для направления рассылки рекламно-информационного характера и
+            осуществления рекламных звонков. <a href="/policies">Условия такой обработки, права, связанные с такой
+              обработкой, механизм их
+              реализации, последствия дачи согласия или отказа разъяснены до дачи согласия.</a>`;
 }
 
 // Обработка отправки формы tickets-form
