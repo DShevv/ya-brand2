@@ -185,7 +185,7 @@
 
     .prices__control {
       display: grid;
-      grid-template-columns: repeat(3, vw-1600(290));
+      grid-template-columns: repeat(2, vw-1600(290));
       gap: vw-1600(20);
       margin: 0 auto;
       width: fit-content;
